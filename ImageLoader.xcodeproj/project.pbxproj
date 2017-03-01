@@ -12,6 +12,15 @@
 		9253C8571E66AE310066F0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9253C8551E66AE310066F0D0 /* Main.storyboard */; };
 		9253C8591E66AE310066F0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9253C8581E66AE310066F0D0 /* Assets.xcassets */; };
 		9253C85C1E66AE310066F0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9253C85A1E66AE310066F0D0 /* LaunchScreen.storyboard */; };
+		9253C8691E66AEBA0066F0D0 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8681E66AEBA0066F0D0 /* LoadingCell.swift */; };
+		9253C86B1E66AECF0066F0D0 /* SourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C86A1E66AECF0066F0D0 /* SourceItem.swift */; };
+		9253C86E1E66AF3A0066F0D0 /* DispatchLoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C86D1E66AF3A0066F0D0 /* DispatchLoadingProtocol.swift */; };
+		9253C8701E66AFF90066F0D0 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C86F1E66AFF90066F0D0 /* LoadState.swift */; };
+		9253C8721E66B2470066F0D0 /* LoadButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8711E66B2470066F0D0 /* LoadButtonState.swift */; };
+		9253C8741E66B6C70066F0D0 /* LoadingCellInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8731E66B6C70066F0D0 /* LoadingCellInteraction.swift */; };
+		9253C8761E66B7810066F0D0 /* ImageLoaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8751E66B7810066F0D0 /* ImageLoaderManager.swift */; };
+		9253C8781E66C3E70066F0D0 /* FakeSorceCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8771E66C3E70066F0D0 /* FakeSorceCreator.swift */; };
+		9253C87A1E66DB1E0066F0D0 /* OpenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253C8791E66DB1E0066F0D0 /* OpenImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		9253C8581E66AE310066F0D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9253C85B1E66AE310066F0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9253C85D1E66AE310066F0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9253C8681E66AEBA0066F0D0 /* LoadingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		9253C86A1E66AECF0066F0D0 /* SourceItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceItem.swift; sourceTree = "<group>"; };
+		9253C86D1E66AF3A0066F0D0 /* DispatchLoadingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchLoadingProtocol.swift; sourceTree = "<group>"; };
+		9253C86F1E66AFF90066F0D0 /* LoadState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
+		9253C8711E66B2470066F0D0 /* LoadButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadButtonState.swift; sourceTree = "<group>"; };
+		9253C8731E66B6C70066F0D0 /* LoadingCellInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingCellInteraction.swift; sourceTree = "<group>"; };
+		9253C8751E66B7810066F0D0 /* ImageLoaderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderManager.swift; sourceTree = "<group>"; };
+		9253C8771E66C3E70066F0D0 /* FakeSorceCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeSorceCreator.swift; sourceTree = "<group>"; };
+		9253C8791E66DB1E0066F0D0 /* OpenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,71 @@
 		9253C8501E66AE310066F0D0 /* ImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				9253C86C1E66AF240066F0D0 /* Protocol */,
+				9253C8631E66AE3A0066F0D0 /* Service */,
+				9253C8651E66AE7D0066F0D0 /* View */,
+				9253C8641E66AE6D0066F0D0 /* Model */,
+				9253C8661E66AE820066F0D0 /* Controller */,
 				9253C8511E66AE310066F0D0 /* AppDelegate.swift */,
+				9253C85D1E66AE310066F0D0 /* Info.plist */,
+				9253C8671E66AE8A0066F0D0 /* Resource */,
+			);
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		9253C8631E66AE3A0066F0D0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9253C8751E66B7810066F0D0 /* ImageLoaderManager.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		9253C8641E66AE6D0066F0D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9253C86A1E66AECF0066F0D0 /* SourceItem.swift */,
+				9253C86F1E66AFF90066F0D0 /* LoadState.swift */,
+				9253C8711E66B2470066F0D0 /* LoadButtonState.swift */,
+				9253C8771E66C3E70066F0D0 /* FakeSorceCreator.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9253C8651E66AE7D0066F0D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9253C8681E66AEBA0066F0D0 /* LoadingCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9253C8661E66AE820066F0D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				9253C8531E66AE310066F0D0 /* ViewController.swift */,
+				9253C8791E66DB1E0066F0D0 /* OpenImageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9253C8671E66AE8A0066F0D0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				9253C8551E66AE310066F0D0 /* Main.storyboard */,
 				9253C8581E66AE310066F0D0 /* Assets.xcassets */,
 				9253C85A1E66AE310066F0D0 /* LaunchScreen.storyboard */,
-				9253C85D1E66AE310066F0D0 /* Info.plist */,
 			);
-			path = ImageLoader;
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		9253C86C1E66AF240066F0D0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9253C86D1E66AF3A0066F0D0 /* DispatchLoadingProtocol.swift */,
+				9253C8731E66B6C70066F0D0 /* LoadingCellInteraction.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9253C8691E66AEBA0066F0D0 /* LoadingCell.swift in Sources */,
 				9253C8541E66AE310066F0D0 /* ViewController.swift in Sources */,
 				9253C8521E66AE310066F0D0 /* AppDelegate.swift in Sources */,
+				9253C8701E66AFF90066F0D0 /* LoadState.swift in Sources */,
+				9253C87A1E66DB1E0066F0D0 /* OpenImageViewController.swift in Sources */,
+				9253C86B1E66AECF0066F0D0 /* SourceItem.swift in Sources */,
+				9253C8741E66B6C70066F0D0 /* LoadingCellInteraction.swift in Sources */,
+				9253C8781E66C3E70066F0D0 /* FakeSorceCreator.swift in Sources */,
+				9253C86E1E66AF3A0066F0D0 /* DispatchLoadingProtocol.swift in Sources */,
+				9253C8721E66B2470066F0D0 /* LoadButtonState.swift in Sources */,
+				9253C8761E66B7810066F0D0 /* ImageLoaderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +384,7 @@
 				9253C8621E66AE310066F0D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
