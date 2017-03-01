@@ -25,6 +25,7 @@ class OpenImageViewController: UIViewController {
                 let imageView = UIImageView.init(image: image)
                 
                 self.scrollView.addSubview(imageView)
+                self.scrollView.contentSize = imageView.bounds.size
             }
         }
     }

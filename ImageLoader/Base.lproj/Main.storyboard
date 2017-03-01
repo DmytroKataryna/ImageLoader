@@ -121,7 +121,7 @@
         <!--Open Image View Controller-->
         <scene sceneID="GYf-MI-TuK">
             <objects>
-                <viewController id="SV9-6U-dqd" customClass="OpenImageViewController" customModule="ImageLoader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="SV9-6U-dqd" customClass="OpenImageViewController" customModule="ImageLoader" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ag-ZE-tX1"/>
                         <viewControllerLayoutGuide type="bottom" id="bqQ-Ra-HLf"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bos-j9-y42" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1887" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hxF-S0-GJh">

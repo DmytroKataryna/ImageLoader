@@ -64,7 +64,6 @@ class ImageLoaderManager : NSObject {
             try fileManager.removeItem(at: path)
         } catch {
             print("Error on delete \(error)")
-            return nil
         }
         
         
