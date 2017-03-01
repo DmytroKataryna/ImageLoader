@@ -58,9 +58,20 @@ class ImageLoaderManager : NSObject {
         
         let path = documentsDirectory.appendingPathComponent(index.description + ".jpg")
         
+        //Remove file if alredy exist
+        
+        do {
+            try fileManager.removeItem(at: path)
+        } catch {
+            print("Error on delete \(error)")
+            return nil
+        }
+        
+        
         do {
             try fileManager.copyItem(at: location, to: path)
-        }catch{
+        } catch let error {
+            print("Error on copy \(error)")
             return nil
         }
         
@@ -69,6 +80,7 @@ class ImageLoaderManager : NSObject {
 }
 
 extension ImageLoaderManager : URLSessionDownloadDelegate {
+    
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL){
         let item = self.processMap.filter({$0.value == downloadTask})
         guard let indexPath = item.first?.key else {return}
@@ -87,10 +99,15 @@ extension ImageLoaderManager : URLSessionDownloadDelegate {
             self.delegate?.didUpdateProgress(for: indexPath, progress: progress)
         }
     }
+    
+    func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
+        print(error.debugDescription)
+    }
 }
 
 
 extension ImageLoaderManager {
+    
     func scaledImage(from path : URL) -> UIImage? {
         guard let image = originalImage(from: path) else {return nil}
         return resizeImage(image: image, newWidth: 375.0)  //375.0 - HARDCODE
@@ -105,7 +122,6 @@ extension ImageLoaderManager {
     }
     
     private func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
-        
         let scale = newWidth / image.size.width
         let newHeight = image.size.height * scale
         let size = CGSize(width : newWidth, height : newHeight)
